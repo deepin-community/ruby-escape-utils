@@ -1,0 +1,30 @@
+From: Lucas Kanashiro <kanashiro@ubuntu.com>
+Date: Thu, 28 Oct 2021 17:25:56 -0300
+Subject: Do not test URI stdlib compatibility with ruby3.0
+
+In ruby3.0 was removed the method URI.escape:
+
+https://github.com/ruby/uri/commit/61c6a47ebf1f2726b60a2bbd70964d64e14b1f98
+
+There is no reason/way to test the compatibility anymore, so let's run the test
+against ruby2.7 only for now. Upstream seems to be dead, last commit from more
+than 5 years ago, because of that I did not spend the time to forward to it.
+
+Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=996220
+---
+ test/uri/escape_test.rb | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/test/uri/escape_test.rb b/test/uri/escape_test.rb
+index b388923..bda380d 100644
+--- a/test/uri/escape_test.rb
++++ b/test/uri/escape_test.rb
+@@ -7,7 +7,7 @@ class UriEscapeTest < Minitest::Test
+       c = i.chr
+       assert_equal URI.escape(c), EscapeUtils.escape_uri(c)
+     end
+-  end
++  end if RbConfig::CONFIG['ruby_version'] == '2.7.0'
+ 
+   def test_uri_containing_tags
+     assert_equal "fo%3Co%3Ebar", EscapeUtils.escape_uri("fo<o>bar")

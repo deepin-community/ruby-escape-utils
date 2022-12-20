@@ -1,0 +1,125 @@
+ruby-escape-utils (1.2.1-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Fri, 11 Nov 2022 18:04:28 +0800
+
+ruby-escape-utils (1.2.1-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Repository, Repository-Browse.
+  * Update watch file format version to 4.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on gem2deb and ruby-minitest.
+  * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.5.1, no changes needed.
+
+  [ Lucas Kanashiro ]
+  * Add patch to not run test checking URI stdlib compat with ruby3.0
+    (Closes: #996220)
+  * Declare compliance with Debian Policy 4.6.0
+
+ -- Lucas Kanashiro <kanashiro@debian.org>  Thu, 28 Oct 2021 17:44:12 -0300
+
+ruby-escape-utils (1.2.1-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * debian/copyright: use spaces rather than tabs to start continuation
+    lines.
+  * Use secure URI in Homepage field.
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Make "Files: *" paragraph the first in the copyright file.
+  * Update Vcs-* headers from URL redirect.
+  * Use canonical URL in Vcs-Git.
+
+  [ Pirate Praveen ]
+  * Bump minimum version of gem2deb to 1.0~
+  * Bump Standards-Version to 4.5.0 (no changes needed)
+  * Move debian/watch to gemwatch.debian.net
+  * Add Testsuite: autopkgtest-pkg-ruby
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 13 Jul 2020 22:56:20 +0530
+
+ruby-escape-utils (1.2.1-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Cédric Boutillier ]
+  * Remove version in the gem2deb build-dependency
+  * Use https:// in Vcs-* fields
+  * Run wrap-and-sort on packaging files
+
+  [ Pirate Praveen ]
+  * New upstream version 1.2.1
+  * Fix tests for ruby 2.5 (Patch from alpinelinux) (Closes: #888149)
+  * Bump standards version to 4.1.3
+  * Bump debhelper compatibility level to 11
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 21 Feb 2018 17:28:16 +0530
+
+ruby-escape-utils (1.1.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Bumpstandards version to 3.9.6 (no changes).
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 27 Nov 2015 16:18:19 +0530
+
+ruby-escape-utils (1.0.1-3) unstable; urgency=medium
+
+  * Team upload.
+  * Drop build-dependency on ruby-rack (Closes: #746379)
+  * Suggest and enhance ruby-haml, ruby-rack and ruby-actionpack
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 15 May 2014 11:18:55 +0200
+
+ruby-escape-utils (1.0.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Build-depend on ruby-minitest (>= 5.0~), as indicated in the gemspec file.
+    (Closes: #744081)
+  * Add DEP-3 header to debian/patches/remove-bundler.patch.
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 22 Apr 2014 12:23:24 +0200
+
+ruby-escape-utils (1.0.1-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * Update copyright.
+  * Remove ruby 1.9.
+  * Remove dh_install override.
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 10 Apr 2014 01:38:11 +0530
+
+ruby-escape-utils (0.2.4-3) unstable; urgency=low
+
+  * Install escape_utils.so to $vendordir/escape_utils, since that's where
+    packages seem to expect to find it.
+
+ -- Tollef Fog Heen <tfheen@debian.org>  Fri, 29 Jun 2012 10:54:48 +0200
+
+ruby-escape-utils (0.2.4-2) unstable; urgency=low
+
+  * Fix uploaders to include full name
+  * Drop DM-Upload-Allowed, no DMs in Uploaders anyway.
+  * Fix description.
+  * Enable tests.
+
+ -- Tollef Fog Heen <tfheen@debian.org>  Fri, 29 Jun 2012 08:58:17 +0200
+
+ruby-escape-utils (0.2.4-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Tollef Fog Heen <tfheen@debian.org>  Wed, 27 Jun 2012 08:39:58 +0200

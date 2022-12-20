@@ -1,0 +1,3 @@
+remove-bundler.patch
+fix-tests-for-ruby-2.5.patch
+0003-Do-not-test-URI-stdlib-compatibility-with-ruby3.0.patch
